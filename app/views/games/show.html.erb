@@ -1,0 +1,7 @@
+<h1>Games</h1>
+
+<%= turbo_stream_from @game %>
+
+<div id="<%= dom_id(@game) %>">
+  <%= render @game %>
+</div>

@@ -1,0 +1,13 @@
+<% 3.times do |row| %>
+  <div class="row">
+    <% 3.times do |col| %>
+      <span class="cell">
+        <% if !game[row, col].nil? %>
+          <%= game[row, col] %>
+        <% else %>
+          <%= button_to game.current_symbol, game_moves_path(game), params: { row: row, col: col }, method: :post %>
+        <% end %>
+      </span>
+    <% end %>
+  </div>
+<% end %>
